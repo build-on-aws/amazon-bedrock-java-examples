@@ -1,11 +1,10 @@
-## My Project
+# Amazon Bedrock Java Examples 
 
-TODO: Fill this README out!
+This repository contains examples using the AWS SDK for Java to help you get started with the Amazon Bedrock service.
 
-Be sure to:
+## Contributing
 
-* Change the title in this README
-* Edit your repository description on GitHub
+We welcome community contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Security
 
@@ -13,5 +12,4 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 
 ## License
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
-
+This library is licensed under the MIT-0 License. See the [LICENSE](LICENSE) file.
