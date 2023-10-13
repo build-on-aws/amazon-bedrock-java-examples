@@ -15,10 +15,9 @@ public class InvokeBedrock {
     public static void main(String[] args) {
         BedrockRuntimeClient runtime = BedrockRuntimeClient.builder()
                 .region(Region.US_EAST_1)
-                .credentialsProvider(ProfileCredentialsProvider.create())
                 .build();
 
-        String prompt = "Generate a list of names for a fun brand of chili sauce";
+        String prompt = "Hello Claude, how are you?";
 
         JSONObject jsonBody = new JSONObject()
                 .put("prompt", "Human: " + prompt + " Assistant:")
@@ -42,7 +41,8 @@ public class InvokeBedrock {
 
         String completion = jsonObject.getString("completion");
 
-        System.out.println("-------------------------------------");
+        System.out.println();
         System.out.println(completion);
+        System.out.println();
     }
 }
