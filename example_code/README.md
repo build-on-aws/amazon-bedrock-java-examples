@@ -23,7 +23,7 @@ mvn package
 
 ### Run the service examples
 
-**IMPORTANT**
+**IMPORTANT:**
 
 The examples perform AWS operations for the account for which you've specified credentials, and you may incur AWS service charges by running them. See the [AWS Pricing](https://aws.amazon.com/pricing/) page for details about the charges you can expect for a given service and operation.
 
