@@ -15,7 +15,6 @@ public class InvokeBedrock {
     public static void main(String[] args) {
         BedrockRuntimeClient runtime = BedrockRuntimeClient.builder()
                 .region(Region.US_EAST_1)
-                .credentialsProvider(ProfileCredentialsProvider.create())
                 .build();
 
         String prompt = "Generate a list of names for a fun brand of chili sauce";
@@ -44,5 +43,6 @@ public class InvokeBedrock {
 
         System.out.println("-------------------------------------");
         System.out.println(completion);
+
     }
 }
