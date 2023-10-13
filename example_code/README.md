@@ -29,8 +29,14 @@ The examples perform AWS operations for the account for which you've specified c
 
 Some of these examples may perform *destructive* operations on AWS resources, such as deleting an Amazon S3 bucket or an Amazon DynamoDB table. **Be very careful** when running an operation that may delete or modify AWS resources in your account. It's best to create separate test-only resources when experimenting with these examples.
 
-Because you built the JAR file that contains the dependencies, you can run an example using the following command. For example, you can run an S3 Java V2 example using this command:
+You can run an example using the following command:
 
 ```bash
-java -cp target/S3J2Project-1.0-SNAPSHOT.jar com.example.s3.ListObjects mybucket
+mvn exec:java -Dexec.mainClass="aws.community.examples.[CLASS_NAME]"
+```
+
+For example, to run "InvokeBedrock", use this command:
+
+```bash
+mvn exec:java -Dexec.mainClass="aws.community.examples.InvokeBedrock"
 ```
