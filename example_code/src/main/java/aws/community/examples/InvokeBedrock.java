@@ -29,7 +29,7 @@ public class InvokeBedrock {
         );
 
         InvokeModelRequest request = InvokeModelRequest.builder()
-                .modelId("anthropic.claude-v1")
+                .modelId("anthropic.claude-v2")
                 .body(body)
                 .build();
 
