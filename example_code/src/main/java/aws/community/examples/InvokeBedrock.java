@@ -4,7 +4,6 @@ import java.nio.charset.StandardCharsets;
 
 import org.json.JSONObject;
 
-import software.amazon.awssdk.auth.credentials.ProfileCredentialsProvider;
 import software.amazon.awssdk.core.SdkBytes;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.bedrockruntime.BedrockRuntimeClient;
