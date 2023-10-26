@@ -18,7 +18,7 @@ public class InvokeBedrockStreamingAsync {
                 .region(Region.US_EAST_1)
                 .build();
 
-        String prompt = "Explain large language models to me.";
+        String prompt = "Explain large language models, like Anthropic Claude, in one short paragraph.";
 
         JSONObject jsonBody = new JSONObject()
                 .put("prompt", "Human: " + prompt + " Assistant:")
