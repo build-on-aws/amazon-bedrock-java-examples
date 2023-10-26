@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Gaming API AWS SAM application
+
+Resources:
+  QuarkusBedrock:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: io.quarkus.amazon.lambda.runtime.QuarkusStreamHandler::handleRequest
+      Runtime: java17
+      CodeUri: target/function.zip
+      MemorySize: 1024
+      SnapStart:
+        ApplyOn: PublishedVersions
+      AutoPublishAlias: snap
+      Timeout: 15
+      Policies:
+        - Statement:
+            - Sid: bedrockall
+              Effect: Allow
+              Action:
+                - bedrock:*
+              Resource: '*'
+      Environment:
+        Variables:
+          JAVA_TOOL_OPTIONS: "-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
+      Events:
+        HttpApiEvent:
+          Type: HttpApi
+Outputs:
+  QuarkusBedrock:
+    Description: URL for application
+    Value: !Sub 'https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/'
+    Export:
+      Name: QuarkusBedrock
