@@ -29,10 +29,7 @@ hs_err_pid*
 replay_pid*
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+.idea/*
 *.iws
 *.iml
 *.ipr
@@ -58,11 +55,6 @@ build/
 
 ### VS Code ###
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
 .history/
 *.vsix
 
