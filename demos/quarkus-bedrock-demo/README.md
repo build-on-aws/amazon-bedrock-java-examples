@@ -1,6 +1,6 @@
 # Amazon Bedrock Demo using Quarkus
 
-This is a sample project showing how to access Amazon Bedrock from a Quarkus application deployed on AWS Lambda as a fat jar app.
+This is a sample project, based on https://github.com/vsenger/quarkus-bedrock, that demonstrates how to access Amazon Bedrock from a Quarkus application deployed on AWS Lambda.
 
 ## Prerequisites
 
