@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: "bootful bedrock"
+aws:
+  bedrock:
+    region: "region"
+    endpoint: "endpoint" #you can customize the endpoint if needed
+  iam:
+    role: "roleARN"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
