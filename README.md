@@ -1,10 +1,6 @@
 # Amazon Bedrock Java Examples 
 
-This repository contains examples using the AWS SDK for Java to help you get started with the Amazon Bedrock service.
-
-## Contributing
-
-We welcome community contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+This repository contains examples using the AWS SDK for Java to help you get started with Amazon Bedrock.
 
 ## Security
 
