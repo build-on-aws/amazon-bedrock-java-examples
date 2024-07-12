@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>aws.community.examples</groupId>
-    <artifactId>bedrock-guardrail-snippets</artifactId>
+    <artifactId>bedrock-guardrail-demo</artifactId>
     <version>0.1</version>
 
     <properties>
@@ -13,16 +13,25 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
+
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <commandlineArgs>-Dfile.encoding=UTF-16</commandlineArgs>
-                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
-                </configuration>                
+                    <mainClass>aws.community.examples.GuardrailDemo</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -52,11 +61,5 @@
             <groupId>software.amazon.awssdk</groupId>
             <artifactId>sts</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20240303</version>
-        </dependency>
     </dependencies>
-
 </project>

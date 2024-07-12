@@ -1,3 +1,5 @@
+package aws.community.examples;
+
 import software.amazon.awssdk.awscore.exception.AwsServiceException;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.bedrock.BedrockClient;
@@ -167,6 +169,7 @@ public class GuardrailDemo {
      * Demonstrates the effect of applying a guardrail to model interactions.
      */
     private void demonstrateGuardrailEffect() {
+        System.out.println("-".repeat(80));
         String userInput = "I'd like to invest in cryptocurrency.";
         System.out.println("\nUser input: " + userInput);
 
@@ -177,6 +180,7 @@ public class GuardrailDemo {
         System.out.println("\nWith Guardrail:");
         String responseWithGuardrail = converse(userInput, true);
         System.out.println("Response: " + responseWithGuardrail);
+        System.out.println("-".repeat(80));
     }
 
     /**
@@ -199,7 +203,7 @@ public class GuardrailDemo {
             }
 
             ConverseResponse response = runtime.converse(requestBuilder.build());
-            return response.output().message().content().get(0).text();
+            return response.output().message().content().getFirst().text();
 
         } catch (AwsServiceException e) {
             System.out.println("Error in conversation: " + e.awsErrorDetails().errorMessage());
